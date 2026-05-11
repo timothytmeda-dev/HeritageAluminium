@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --color-heritage-navy: #1B365D;
+  --color-heritage-orange: #CA8A04;
+  --color-heritage-white: #FFFFFF;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-slate-900 bg-white antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-heritage-navy text-white font-semibold rounded-none transition-all duration-300 hover:bg-heritage-orange focus:outline-none focus:ring-2 focus:ring-heritage-navy focus:ring-offset-2 uppercase tracking-wider text-sm;
+  }
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-heritage-navy text-heritage-navy font-semibold rounded-none transition-all duration-300 hover:bg-heritage-orange hover:border-heritage-orange hover:text-white focus:outline-none uppercase tracking-wider text-sm;
+  }
+}
